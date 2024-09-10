@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-bottom: 100px; /* Add bottom padding */
+}
+
+header.side-by-side {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    justify-content: center;
+    flex-wrap: nowrap; /* Ensure no wrapping */
+}
+
+header.side-by-side #photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 2rem;
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+header.side-by-side .header-info h1 {
+    margin: 0;
+}
+
+header.side-by-side .header-info {
+    text-align: left;
+}
+
+#resume {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #555;
+    margin-top: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+.project {
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    header.side-by-side {
+        flex-direction: column;
+    }
+
+    header.side-by-side #photo img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    #resume {
+        width: 90%;
+    }
+
+    footer img {
+        width: 25px;
+        height: 25px;
+    }
+}
