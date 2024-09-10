@@ -1,20 +1,21 @@
+/* General Body Styles */
 body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding-bottom: 100px; /* Add bottom padding */
 }
 
+/* Header Section Styling */
 header.side-by-side {
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-color: #2d2d2d;
     color: white;
     padding: 2rem;
     justify-content: center;
-    flex-wrap: nowrap; /* Ensure no wrapping */
+    animation: fadeIn 2s ease-out;
 }
 
 header.side-by-side #photo img {
@@ -22,62 +23,85 @@ header.side-by-side #photo img {
     width: 150px;
     height: 150px;
     margin-right: 2rem;
-    flex-shrink: 0; /* Prevent the image from shrinking */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+header.side-by-side #photo img:hover {
+    transform: scale(1.1);
 }
 
 header.side-by-side .header-info h1 {
     margin: 0;
+    font-size: 2.5rem;
+    animation: slideIn 1.5s ease-out;
 }
 
-header.side-by-side .header-info {
-    text-align: left;
+header.side-by-side .header-info p {
+    font-size: 1.2rem;
 }
 
+/* Resume Section */
 #resume {
     width: 80%;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 2rem;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-out;
 }
 
-h2 {
-    color: #555;
-    margin-top: 1.5rem;
+/* Animation Styles */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-ul li {
-    margin-bottom: 0.5rem;
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-.project {
-    margin-bottom: 1.5rem;
-}
-
+/* Footer Section */
 footer {
-    background-color: #333;
+    background-color: #2d2d2d;
     color: white;
     text-align: center;
     padding: 1rem 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
     margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 footer img {
     width: 30px;
     height: 30px;
+    transition: transform 0.3s ease;
 }
 
+footer img:hover {
+    transform: scale(1.2);
+}
+
+footer a:hover {
+    transform: translateY(-3px);
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header.side-by-side {
         flex-direction: column;
